@@ -10,9 +10,9 @@ cd txt2man
 git checkout tags/txt2man-1.7.1
 make install prefix=/home/$(whoami)/txt2man-install
 PATH=/home/$(whoami)/txt2man-install/bin:$PATH
+export PATH=$PATH
 echo "# txt2man" >> ~/.bashrc
 echo "export PATH=$PATH" >> ~/.bashrc
-source ~/.bashrc
 
 cd ~
 
@@ -27,9 +27,9 @@ mv atlas3.11.40.tar.bz2 ~
 cd ~
 tar -xvf atlas3.11.40.tar.bz2
 PATH=/home/$(whoami)/ATLAS/bin:$PATH
+export PATH=$PATH
 echo "# atlas" >> ~/.bashrc
 echo "export PATH=$PATH" >> ~/.bashrc
-source ~/.bashrc
 
 echo " 编译caffe:"
 git clone https://github.com/BVLC/caffe.git
